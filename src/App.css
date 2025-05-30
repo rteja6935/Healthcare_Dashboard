@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
+/* src/App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Root container, bound to viewport height */
+.app-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #E6EFFA;
+  overflow: hidden; /* Prevent scrolling on the root container */
+}
+
+/* Header stays fixed height and scrolls with main-content */
+header {
+  background-color: white;
+  height: 60px;
+  padding: 10px 20px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
 
-.App-link {
-  color: #61dafb;
+/* Main content is the scrollable container */
+.main-content {
+  flex: 1; /* Take remaining height */
+  margin: 15px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Sidebar + dashboard content row */
+.inner-content {
+  display: flex;
+  flex: 1; /* Take available space within main-content */
+  min-height: 0; /* Important for flexbox scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+  background-color: #f1f1f1;
+}
+
+/* Dashboard content */
+.dashboard-content {
+  flex: 1; /* Take remaining space */
+  padding: 16px;
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+  .inner-content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+    width: 100%;
   }
+
+
+}
+
+
+@media (max-width: 767px) {
+ .header {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 110px;
+}
+
 }

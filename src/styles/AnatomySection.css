@@ -1,0 +1,85 @@
+ .anatomy-containe {
+  position: relative;
+  width: 200px;
+  padding: 20px;
+  background-color: #f4f8fe;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  margin-top: 0px;
+}
+
+.anatomy-image {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 10px;
+  
+}
+
+.zoom-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+}
+
+.health-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.label-icon {
+  font-size: 14px;
+}
+
+.heart-label {
+  top: 80px;
+  right: -30px;
+  background-color: #3734A9;
+}
+
+.leg-label {
+  bottom: 100px;
+  left: 0px;
+  background-color: #00c4cc;
+}
+
+.spinner {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent 0%, #888 50%, transparent 100%);
+  border-radius: 2px;
+}
+
+.spinner-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #888;
+  border-radius: 50%;
+  z-index: 2;
+}

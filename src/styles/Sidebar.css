@@ -1,0 +1,43 @@
+.sidebar {
+  width: 150px;
+  background-color: #F6FAFF;
+  padding: 16px;
+  padding-left: 20px;
+   padding-right: 70px;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #555;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.sidebar-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.settings-item{
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+  cursor: pointer;
+}
+

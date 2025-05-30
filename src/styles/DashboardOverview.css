@@ -1,0 +1,59 @@
+.dashboard-overview {
+  display: flex;
+  flex-direction: row;
+  
+  width:1000px;
+}
+.calendar-and-schedule{
+   background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  width:1000px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.dashboard-heading{
+  margin-top: 0px;
+}
+
+.middle-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.middel-content{
+  width:500px;
+  
+}
+
+@media (max-width: 1024px) {
+  .middle-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dashboard-overview {
+  display: flex;
+  flex-direction: column;
+  
+  width:1000px;
+}
+}
+
+@media (max-width: 430px) {
+  .middle-top{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dashboard-overview {
+  display: flex;
+  flex-direction: column;
+  
+  width:1000px;
+}
+}

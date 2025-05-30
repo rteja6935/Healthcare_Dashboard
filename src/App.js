@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Headers from './components/Headers';
+import Sidebar from './components/Sidebar';
+import DashboardMainContent from './components/DashboardMainContent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      {/* main-content is now the scroll container */}
+      <div className="main-content">
+        {/* Header should scroll along with sidebar + content */}
+        <div className="header">
+          <Headers />
+        </div>
+        
+        <div className="inner-content">
+          <div className="sidebar"> 
+            <Sidebar />
+          </div>
+          <div className="dashboard-content">
+            <DashboardMainContent />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
